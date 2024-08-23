@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+<nav>
+    <div class="flex justify-between mx-6 my-8">
+        <div class="flex space-between gap-x-10 items-center">
+           <div class="">
+                <img src="./vunt_log.svg" class="h-10 w-10" >
+           </div>
+           <div class="flex gap-x-4 text-2xl  rubik-400">
+                    <a href="index.html"><p>Jobs</p></a>
+                    <a href="./applicant.html" class="underline" ><p>Applicants</p></a>
+           </div>
+        </div>
+        <div class="right-nav-container flex gap-x-4 items-center  ">
+                <div class="border-2 rounded-md flex gap-x-1 py-1 px-1 w-[331px] h-[43px]">
+                    <img class="w-[18px] h-[18px] my-[7px]" alt="search icon" src="./search_icon.svg">
+                    <input placeholder="Search" id="search_bar" onkeyup="search()" >
+                </div>
+                <div class="right-container-user-logo">
+                        <img class="w-[32px] h-[32px]" src="./usr_logo.svg">
+                </div>
+        </div>
+    </div>
+</nav>
+<div class=" flex justify-between mx-6">
+    <div>
+        <p class="rubik-400 font-bold text-3xl">Applicant Details</p>
+    </div>
+    <div class="bg-[#0000FF] rounded-full flex my-2 text-[#fff] px-4 text-xl py-2 gap-x-2">
+        <a href=""  class="submit flex" id="add_job_button" > 
+            <img src="./add_new_job.svg" alt="add image">
+            <p>Add New Participant</p>
+        </a> 
+    </div>
+    
+</div>
+
+<div class="applicant_table mx-6">
+    
+   
+
+
+<table class="w-full mt-[10px]" id="sortableTable">
+    <thead class="bg-gray-900 ">
+        <tr>
+        <th class="sortable flex gap-x-2" data-column="name">
+            <div class="flex gap-x-1  " onclick="sort_candidates()">
+                <p class="text-white ">Applicant</p>
+                
+                
+            </div>
+            <div class="" >
+                <input style="width: auto;" class="rounded-md" type="text" placeholder=" search for candidate" id="applicant_search_bar" onkeyup="search_applicant()">
+            </div>
+            <div>
+                <img src="./up.jpg" style="width: 20px; height: 20px;display: none;" class="asc_img" alt="">
+                <img src="./down.png" style="width: 20px; height: 20px; display: none;" class="desc_img" alt="">
+            </div>
+        </th>
+        <th>
+            <div class="flex gap-x-1 " onclick="sort_role()">
+                <p class="text-white">Role</p>
+                <img src="./list_icon.png">
+            </div>
+        </th>
+        <th>
+            <div class="flex gap-x-1 " onclick="sort_years()">
+                <p class="text-white">Years of Experience</p>
+                <img src="./list_icon.png">
+            </div>
+        </th>
+        <th class="sortable" data-column="date">
+            <div class="flex gap-x-1 " onclick="sort_date()">
+                <p class="text-white">Applied On</p>
+                <img src="./list_icon.png">
+            </div>
+        </th>
+        <th class="sortable" data-column="status">
+            <div class="flex gap-x-1 " onclick="sort_status()">
+                <p class="text-white">Status</p>
+                
+                
+            </div>
+        </th>
+        <th>
+            <div class="flex gap-x-1 ">
+                <p class="text-white">Actions</p>
+                
+            </div>
+        </th>
+    </tr>
+    </thead>
+    <tbody class="table-body" id="table-body">
+        
+    </tbody>
+</table>
+
+<div class="selected_items">
+    <div id="show_items">
+        
+    </div>
+    <select id="select_number_of_rows">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+    </select>
+</div>
+
+</div>
+<div id="page-button" class="flex gap-x-2 mx-auto justify-center items-center py-2"></div>
+
+
+
+<button id="clear_jobs" class="btn-clear" style="display: none;">Clear All Jobs</button>
+
+
+</body>
+<script src="./table_sorting.js"></script>
+<script src="./table_search.js"></script>
+<script src="./delete_row.js"></script>
+<script src="./table_pagination.js"></script>
+<script src="./table_applicant_search.js"></script>
+<script src="./add_participant.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const clearJobsButton = document.getElementById('clear_jobs');
+
+    clearJobsButton.addEventListener('click', () => {
+        localStorage.removeItem('jobCards');
+        jobContainer.innerHTML = ''; // Clear job cards from the UI
+    });
+});
+
+</script>
+</html>

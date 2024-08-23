@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.rubik-400 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+
+th{
+    padding: 10px;
+    cursor: pointer;
+}
+
+  td {
+    border-left: none;
+    border-right: none;
+  }
+
+  tr {
+    border-bottom: 1px solid black;
+    color: rgb(95, 95, 95);
+  }
+
+  tr:last-child {
+    border-bottom: 1px solid rgb(174, 174, 174);
+  }
+
+ 
+.selected_items{
+   display: flex;
+   
+   padding: 5px;
+   
+   color: rgb(73, 72, 72);
+   gap: 10px;
+
+}
+
+#select_number_of_rows{
+    
+    color: rgb(66, 65, 65);
+}
+
+  
+  
+  
+.status{
+    background-color: rgb(195, 232, 188);
+    border-radius: 5px;
+    color: rgb(64, 146, 64);
+    width: fit-content;
+    padding: 8px;
+    
+}  
+.status_rejected
+{
+  background-color: rgb(255, 150, 150);
+    border-radius: 5px;
+    color: rgb(227, 34, 34);
+    width: fit-content;
+    padding: 8px;
+    
+}
+.applicant_name{
+    color: green;
+}
+
+.popup{
+    background: rgba(0, 0,0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#confirm_popup{
+  background: rgba(0, 0,0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.confirm
+{
+  background-color: #fff;
+  width: 30%;
+  height: 30%;
+  
+}
+
+.form
+{
+    background: rgb(255, 255, 255);
+    width: 50%;
+    height: 535px;
+    border-radius: 20px;
+    
+
+}
+
+/* 
+pagination css */
+
+
+.table_row{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height:70px;
+}
+
+.pagination_button
+{
+   border: 2px solid rgb(188, 184, 184);
+   background-color: black;
+   color: #fff;
+   padding: 8px;
+   border-radius: 1px;
+}
+
+/* delete icon in applicant */
+.delete_row{
+  cursor: pointer;
+}
+
+.delete_button{
+  cursor: pointer;
+}
