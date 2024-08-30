@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,20 +18,20 @@
     <div class="flex justify-between mx-6 my-8">
         <div class="flex space-between gap-x-10 items-center">
            <div class="">
-                <img src="./vunt_log.svg" class="h-10 w-10" >
+                <img src="./images/vunt_log.svg" class="h-10 w-10" >
            </div>
            <div class="flex gap-x-4 text-2xl  rubik-400">
-                    <a href="index.html"><p>Jobs</p></a>
+                    <a href="../jobs/index.html"><p>Jobs</p></a>
                     <a href="./applicant.html" class="underline" ><p>Applicants</p></a>
            </div>
         </div>
         <div class="right-nav-container flex gap-x-4 items-center  ">
                 <div class="border-2 rounded-md flex gap-x-1 py-1 px-1 w-[331px] h-[43px]">
-                    <img class="w-[18px] h-[18px] my-[7px]" alt="search icon" src="./search_icon.svg">
+                    <img class="w-[18px] h-[18px] my-[7px]" alt="search icon" src="./images/search_icon.svg">
                     <input placeholder="Search" id="search_bar" onkeyup="search()" >
                 </div>
                 <div class="right-container-user-logo">
-                        <img class="w-[32px] h-[32px]" src="./usr_logo.svg">
+                        <img class="w-[32px] h-[32px]" src="./images/usr_logo.svg">
                 </div>
         </div>
     </div>
@@ -42,7 +42,7 @@
     </div>
     <div class="bg-[#0000FF] rounded-full flex my-2 text-[#fff] px-4 text-xl py-2 gap-x-2">
         <a href=""  class="submit flex" id="add_job_button" > 
-            <img src="./add_new_job.svg" alt="add image">
+            <img src="./images/add_new_applicant.svg" alt="add image">
             <p>Add New Participant</p>
         </a> 
     </div>
@@ -67,26 +67,26 @@
                 <input style="width: auto;" class="rounded-md" type="text" placeholder=" search for candidate" id="applicant_search_bar" onkeyup="search_applicant()">
             </div>
             <div>
-                <img src="./up.jpg" style="width: 20px; height: 20px;display: none;" class="asc_img" alt="">
-                <img src="./down.png" style="width: 20px; height: 20px; display: none;" class="desc_img" alt="">
+                <img src="./images/up.jpg" style="width: 20px; height: 20px;display: none;" class="asc_img" alt="">
+                <img src="./images/down.png" style="width: 20px; height: 20px; display: none;" class="desc_img" alt="">
             </div>
         </th>
         <th>
             <div class="flex gap-x-1 " onclick="sort_role()">
                 <p class="text-white">Role</p>
-                <img src="./list_icon.png">
+                <img src="./images/list_icon.png">
             </div>
         </th>
         <th>
             <div class="flex gap-x-1 " onclick="sort_years()">
                 <p class="text-white">Years of Experience</p>
-                <img src="./list_icon.png">
+                <img src="./images/list_icon.png">
             </div>
         </th>
         <th class="sortable" data-column="date">
             <div class="flex gap-x-1 " onclick="sort_date()">
                 <p class="text-white">Applied On</p>
-                <img src="./list_icon.png">
+                <img src="./images/list_icon.png">
             </div>
         </th>
         <th class="sortable" data-column="status">

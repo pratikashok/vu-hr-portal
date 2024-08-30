@@ -96,7 +96,7 @@ renderTable(1,5);
                     const delete_cell = document.createElement('td')
                     const delete_cell_img = document.createElement('img')
                     delete_cell.classList.add('delete_row');
-                    delete_cell_img.src = './delete_icon.svg'
+                    delete_cell_img.src = './images/delete_icon.svg'
                     
                     row.classList.add('candidate');
                     const nameCell = document.createElement('td');

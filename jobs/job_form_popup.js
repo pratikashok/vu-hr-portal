@@ -17,4 +17,15 @@ function popup_form() {
   {
     document.querySelector("#popup").style.display = "none";
   }
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const close_button = document.getElementById("close");
+    if (close_button) {
+      close_button.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        close();
+      });
+    }
+  });
   

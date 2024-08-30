@@ -14,11 +14,11 @@ function readAll() {
         elements += `
         <div class="job_cards flex justify-between mx-6 my-8 shadow-[0_4px_8px_rgba(0,_0,_0,_0.2)] p-4 items-center">
             <div class="job_image_info flex gap-x-2 w-[1200px]">
-                <div class="image"><img src="./job_icon.svg" alt=""></div>
+                <div class="image"><img src="./images/job_icon.svg" alt=""></div>
                 <div class="job_name_type ">
                     <p class="applicant_name">${record.job_role}</p>
                     <div class="job_type flex ">
-                        <img class="" src="./job_type_icon.svg" alt="">
+                        <img class="" src="./images/job_type_icon.svg" alt="">
                         <p class="mx-1">${record.job_type}</p>
                     </div>
                 </div>
@@ -34,10 +34,10 @@ function readAll() {
                 </div>
             </div>
             <div class="delete_icon ml-[300px]">
-                <img src="./delete_icon.svg" class="delete_button" alt="" onclick="showConfirmationPopup(${record.id})">
+                <img src="./images/delete_icon.svg" class="delete_button" alt="" onclick="showConfirmationPopup(${record.id})">
             </div>
             <div class="view_more">
-                <img src="./view_more.svg" alt="">
+                <img src="./images/view_more.svg" alt="">
             </div>
         </div>`;
     });
